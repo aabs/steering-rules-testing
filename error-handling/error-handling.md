@@ -205,3 +205,11 @@ Test failure paths, boundary cases, and recovery behavior as deliberately as suc
 :::rule id="ERR-50" mandatory="true" category="error-handling" tags="error-handling, prevention,design"
 Design APIs and state models so that illegal states and invalid operations are hard to represent.
 :::
+
+:::rule id="ERR-51" mandatory="true" category="error-handling" tags="exceptions, state-management"
+Do work that may fail off to the side before changing committed state. First prepare all risky work using temporary state; then commit using steps that cannot fail or are tightly controlled.
+:::
+
+:::rule id="ERR-52" mandatory="true" category="error-handling" tags="exceptions, state-management"
+Prefer commit-or-rollback behavior when practical. A failed operation should ideally leave the observable state exactly as it was before the operation began
+:::

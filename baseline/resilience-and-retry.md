@@ -205,4 +205,3 @@ Prefer designs that remove the need for retries over designs that depend on retr
 :::rule id="RES-50" mandatory="true" category="resilience" tags="resilience, recovery, ownership"
 Every resilience mechanism must have a clearly owned recovery decision and stopping condition.
 :::
-``

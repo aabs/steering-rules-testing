@@ -1,0 +1,4 @@
+name: "csharp-14-rules"
+version: "0.1.0"
+minSteergenVersion: "0.3.2"
+scope: project
