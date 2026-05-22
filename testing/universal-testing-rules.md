@@ -7,7 +7,7 @@ status: active
 ---
 
 
-:::rule id="TR-001" category="completion" 
+:::rule id="UTR-001" category="completion" 
 A feature is not complete until integration tests prove it:
 
 1. Runs as intended in situ
@@ -19,14 +19,14 @@ Features with only compilation tests or with failing runtime tests are incomplet
 :::
 
 
-:::rule id="TR-002" mandatory="false" category="testing" 
+:::rule id="UTR-002" mandatory="false" category="testing" 
 Avoid testing internal implementation details and avoid depending on concrete implementations where looser behavioral validation is possible.
 :::
 
-:::rule id="TR-003" mandatory="false" category="testing" 
+:::rule id="UTR-003" mandatory="false" category="testing" 
 Never mask failing tests with broad `try` or `catch` blocks or "success assertions".
 :::
 
-:::rule id="TR-003" mandatory="false" category="testing" 
+:::rule id="UTR-004" mandatory="false" category="testing" 
 Failing tests indentify outstanding work and should never be suppressed
 :::

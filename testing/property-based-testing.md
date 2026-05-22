@@ -12,10 +12,6 @@ The standard property based testing (PBT) stack is:
 - `FsCheck.XUnit` for property based testing integration into xunit
 :::
 
-:::rule id="PBT-02" mandatory="true" category="testing"
-Always default to Property Based Tests rather than Unit tests.
-:::
-
 :::rule id="PBT-03" mandatory="true" category="testing"
 Property Based Tests should be the default approach for testing that a SUT is broadly correct,
 :::

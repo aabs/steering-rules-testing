@@ -138,70 +138,58 @@ All inter-service communication must occur through explicit API contracts or mes
 Services must be independently deployable without requiring changes to unrelated API consumers.
 :::
 
-:::rule id="API-34" mandatory="true" category="api-centric" tags="api, compatibility"
-API producers must maintain compatibility with existing consumers for supported versions.
-:::
-
-:::rule id="API-35" mandatory="true" category="api-centric" tags="api, ownership"
+:::rule id="API-34" mandatory="true" category="api-centric" tags="api, ownership"
 Each API contract must have a clearly defined owning team or service.
 :::
 
-:::rule id="API-36" mandatory="true" category="api-centric" tags="api, contracts, review"
+:::rule id="API-35" mandatory="true" category="api-centric" tags="api, contracts, review"
 Changes to API contracts must be reviewed with respect to consumers and compatibility impact.
 :::
 
-:::rule id="API-37" mandatory="false" category="api-centric" tags="api, api-first, design"
+:::rule id="API-36" mandatory="false" category="api-centric" tags="api, api-first, design"
 Adopt API-first or contract-first development where multiple teams depend on the API.
 :::
 
-:::rule id="API-38" mandatory="true" category="api-centric" tags="api, documentation"
+:::rule id="API-37" mandatory="true" category="api-centric" tags="api, documentation"
 Every public API must be documented with its purpose, inputs, outputs, error cases, and usage constraints.
 :::
 
-:::rule id="API-39" mandatory="true" category="api-centric" tags="api, discoverability"
+:::rule id="API-38" mandatory="true" category="api-centric" tags="api, discoverability"
 APIs must be discoverable through consistent documentation, schemas, or metadata descriptions.
 :::
 
-:::rule id="API-40" mandatory="true" category="api-centric" tags="api, consistency"
-Maintain consistent patterns across APIs for naming, errors, pagination, and authentication.
-:::
-
-:::rule id="API-41" mandatory="true" category="api-centric" tags="api, security, auth"
+:::rule id="API-39" mandatory="true" category="api-centric" tags="api, security, auth"
 All protected APIs must enforce authentication and authorization at the boundary.
 :::
 
-:::rule id="API-42" mandatory="true" category="api-centric" tags="api, rate-limiting"
-Define usage limits or expectations for externally exposed APIs.
-:::
-
-:::rule id="API-43" mandatory="false" category="api-centric" tags="api, rate-limiting, protection"
+:::rule id="API-40" mandatory="false" category="api-centric" tags="api, rate-limiting, protection"
 Apply throttling or rate limiting where APIs are exposed to untrusted or high-volume callers.
 :::
 
-:::rule id="API-44" mandatory="true" category="api-centric" tags="api, evolution"
+:::rule id="API-41" mandatory="true" category="api-centric" tags="api, evolution"
 Deprecation and removal of APIs must follow a defined lifecycle with consumer notice.
 :::
 
-:::rule id="API-45" mandatory="true" category="api-centric" tags="api, testing"
+:::rule id="API-42" mandatory="true" category="api-centric" tags="api, testing"
 Test APIs for both success and failure cases against their contract.
 :::
 
-:::rule id="API-46" mandatory="true" category="api-centric" tags="api, contract-tests"
+:::rule id="API-43" mandatory="true" category="api-centric" tags="api, contract-tests"
 Use contract or integration tests to verify producer-consumer compatibility.
 :::
 
-:::rule id="API-47" mandatory="true" category="api-centric" tags="api, independence"
+:::rule id="API-44" mandatory="true" category="api-centric" tags="api, independence"
 Do not require synchronous coordination across multiple APIs to complete a single business action unless explicitly designed.
 :::
 
-:::rule id="API-48" mandatory="false" category="api-centric" tags="api, aggregation"
+:::rule id="API-45" mandatory="false" category="api-centric" tags="api, aggregation"
 Use aggregation layers or composition APIs when clients require data from multiple services.
 :::
 
-:::rule id="API-49" mandatory="true" category="api-centric" tags="api, side-effects, boundaries"
+:::rule id="API-46" mandatory="true" category="api-centric" tags="api, side-effects, boundaries"
 Do not couple unrelated business operations in a single API endpoint.
 :::
 
-:::rule id="API-50" mandatory="true" category="api-centric" tags="api, simplicity"
+:::rule id="API-47" mandatory="true" category="api-centric" tags="api, simplicity"
 Prefer the simplest API surface that satisfies the required use cases.
 :::

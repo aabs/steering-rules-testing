@@ -154,26 +154,6 @@ Do not create hidden randomness inside business logic when deterministic behavio
 Assume shared mutable state is unsafe unless its concurrency model is explicit.
 :::
 
-:::rule id="CS10-38" mandatory="true" category="development" tags="csharp, reflection, trimming"
-Avoid unnecessary runtime reflection in application code.
-:::
-
-:::rule id="CS10-39" mandatory="false" category="development" tags="csharp, trimming, compatibility"
-Make libraries trimming-compatible when they are intended to run in trimmed applications.
-:::
-
-:::rule id="CS10-40" mandatory="false" category="development" tags="csharp, native-aot, compatibility"
-Make libraries AOT-compatible when they are intended to run in Native AOT applications.
-:::
-
-:::rule id="CS10-41" mandatory="false" category="development" tags="csharp, native-aot, dynamic-code"
-Avoid dynamic code generation in code paths that must support Native AOT.
-:::
-
-:::rule id="CS10-42" mandatory="true" category="development" tags="csharp, allocations, performance"
-Avoid unnecessary allocations in hot paths.
-:::
-
 :::rule id="CS10-43" mandatory="false" category="development" tags="csharp, spans, performance"
 Use Span<T> and ReadOnlySpan<T> only where they improve performance without reducing clarity unacceptably.
 :::
