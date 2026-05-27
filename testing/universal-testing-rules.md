@@ -7,26 +7,26 @@ status: active
 ---
 
 
-:::rule id="UTR-001" category="completion" 
-A feature is not complete until integration tests prove it:
-
-1. Runs as intended in situ
-2. Executes successfully at runtime rather than merely compiling
-3. Produces results that are accessible and correct
-4. Exercises the major code paths and result types involved
-
-Features with only compilation tests or with failing runtime tests are incomplete.
+:::rule id="UTR-001" category="completion"
+A feature shall be marked complete only when integration tests pass at runtime, verify in-situ behavior, verify accessible and correct results, and exercise major code paths and result types.
 :::
 
-
-:::rule id="UTR-002" mandatory="false" category="testing" 
-Avoid testing internal implementation details and avoid depending on concrete implementations where looser behavioral validation is possible.
+:::rule id="UTR-002" mandatory="false" category="completion"
+When only compilation checks exist, the feature shall be marked incomplete.
 :::
 
-:::rule id="UTR-003" mandatory="false" category="testing" 
-Never mask failing tests with broad `try` or `catch` blocks or "success assertions".
+:::rule id="UTR-003" mandatory="false" category="completion"
+When any runtime test fails, the feature shall be marked incomplete.
 :::
 
-:::rule id="UTR-004" mandatory="false" category="testing" 
-Failing tests indentify outstanding work and should never be suppressed
+:::rule id="UTR-004" mandatory="false" category="testing"
+When behavioral validation is possible, tests shall validate externally observable behavior and avoid internal-detail and concrete-implementation assertions.
+:::
+
+:::rule id="UTR-005" mandatory="false" category="testing"
+Tests shall not mask failures with broad try/catch blocks or unconditional success assertions.
+:::
+
+:::rule id="UTR-006" mandatory="false" category="testing"
+When a test fails, the team shall treat it as outstanding work and shall not suppress it.
 :::

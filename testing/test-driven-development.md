@@ -8,25 +8,38 @@ status: active
 
 
 :::rule id="TDD-001" category="testing"  mandatory="true"
-You MUST practice test-first development.  Follow the process of "Red-Green-Refactor"
+The development workflow shall follow test-first Red-Green-Refactor.
+:::
 
-The Rules of TDD are:
-- Start with a PBT test that fails.
-- Make the smallest change needed to make that test pass.
-- Keep each step tiny so you focus on one thing at a time.
+:::rule id="TDD-005" category="testing"  mandatory="true"
+At the start of each cycle, the developer shall create a failing property-based test.
+:::
 
-Never get a failing test to pass by masking its failure.  Only a valid addition of functionality counts.
+:::rule id="TDD-006" category="testing"  mandatory="true"
+In the Green step, the developer shall make the smallest functional code change that makes the failing test pass.
+:::
+
+:::rule id="TDD-007" category="testing"  mandatory="true"
+In each cycle, the developer shall limit changes to a single concern.
+:::
+
+:::rule id="TDD-008" category="testing"  mandatory="true"
+When moving from red to green, the implementation shall not mask failures; it shall pass by adding valid functionality.
 :::
 
 :::rule id="TDD-002" category="testing"  mandatory="true"
-Test code should be developed first, NEVER in retrospect.
+Before writing production code for a behavior, the developer shall write the test code for that behavior.
 :::
 
 :::rule id="TDD-003" category="testing"  mandatory="true"
-Observe a test failing first, before implementing the application code that makes it pass.
+Before implementing code for a behavior, the developer shall execute the corresponding test and observe it fail.
 :::
 
 :::rule id="TDD-004" category="testing"  mandatory="true"
-When a test finally passes, refactor the new code to ensure it is clean and has no technical debt.
+When the test passes, the developer shall refactor the changed code while preserving test pass status.
+:::
+
+:::rule id="TDD-009" category="testing"  mandatory="true"
+After refactoring, the changed code shall satisfy the project cleanliness and technical-debt standards.
 :::
 
